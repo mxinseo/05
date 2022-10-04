@@ -4,23 +4,18 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int a;
+	char c;
+	int num = 0;
 
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d", &a);
-	
-	
-	/* 
-	if (a < 0)
-		x=-x;
+	printf("input a string: ");
+
+	while ((c = getchar()) != '\n')		 
+	{ 
+		if (c >= 48 && c <= 57)			
+			num++;					
+	}
 		
-	printf("%d", x);
-	*/
-
-	if (a < 0)
-		printf("절대값은 %d 입니다. \n", -a);
-	else
-		printf("절대값은 %d 입니다. \n", a);
+	printf("the number of digits is : %d", num);
 
 	return 0;
 }
