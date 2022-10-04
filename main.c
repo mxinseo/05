@@ -4,17 +4,32 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int n;
-	int sum = 0;
-	int i;
+	char op;
+	int x, y;
+	int result;
 
-	printf("input a number : ");
-	scanf("%d", &n);
+	printf("enter the calculation : ");
+	scanf("%d %c %d", &x, &op, &y);
 
-	for (i = 1; i <= n; i++)
-		sum = sum + i;
-
-	printf("The result is %d", sum);
-
+	switch (op)
+	{
+	case '+':
+		result = x + y;
+		break;
+	case '-':
+		result = x - y;
+		break;
+	case '*':
+		result = x * y;
+		break;
+	case '/':
+		result = x / y;
+		break;
+	default:
+		result = x % y;
+		break;
+	}
+	printf(" = %d", result);
+	
 	return 0;
 }
